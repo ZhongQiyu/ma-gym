@@ -12,7 +12,7 @@ for spec in env_specs:
     register(
         id='ma_' + spec.id,
         entry_point='ma_gym.envs.openai:MultiAgentWrapper',
-        kwargs={'name': spec.id, **spec._kwargs}
+        kwargs={'name': spec.id, **spec.kwargs}
     )
 
 # add new environments : iterate over full observability
